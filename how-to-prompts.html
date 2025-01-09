@@ -29,7 +29,6 @@
             background-color: white;
             padding: 15px;
             border-radius: 4px;
-            white-space: pre-wrap;
         }
         .note {
             color: #666;
@@ -41,23 +40,6 @@
             margin-top: 10px;
             font-size: 0.9em;
         }
-        .copy-button {
-            float: right;
-            padding: 5px 10px;
-            background: #0066cc;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        .copy-button:hover {
-            background: #0055aa;
-        }
-        pre {
-            white-space: pre-wrap;
-            margin: 0;
-            font-family: monospace;
-        }
     </style>
 </head>
 <body>
@@ -65,217 +47,134 @@
     
     <div class="prompt-section">
         <div class="prompt-title">1. Introduction Prompt</div>
-        <button class="copy-button" onclick="copyToClipboard(this)">Copy</button>
-        <div class="prompt-content">Write a 2-3 paragraph introduction for a dental blog post on "[TOPIC]". The introduction should address practicing dentists and implantologists, provide clinical significance of [TOPIC], and grab readers' attention with relevant statistics or clinical cases. Include key considerations that influence [TOPIC]. Write from the perspective of an experienced implantologist with over 15 years of clinical practice. Use professional yet engaging tone. Reference current research and clinical guidelines where appropriate.
-
-Target audience: Dental professionals, specifically implantologists and oral surgeons
-Tone: Professional, authoritative, evidence-based
-Length: 2-3 paragraphs (250-300 words)
-Key elements to include:
-- Clinical significance
-- Current challenges in the field
-- Statistical data or research findings
-- Overview of main points to be covered</div>
+        <div class="prompt-content">
+            Write a 2-3 paragraph introduction for a dental blog post on "[TOPIC]". The introduction should:
+            <ul>
+                <li>Address practicing dentists and implantologists</li>
+                <li>Provide clinical significance of [TOPIC]</li>
+                <li>Include relevant statistics or clinical cases</li>
+                <li>Present key considerations</li>
+                <li>Write from the perspective of an experienced specialist with over 15 years of clinical practice</li>
+            </ul>
+        </div>
         <div class="example">
-            Examples: 
-            - "How to Choose the Right Dental Implant Diameter"
-            - "How to Manage Peri-implantitis"
-            - "How to Implement Digital Workflow in Implant Planning"
+            Example: "How to Choose the Right Dental Implant Diameter", "How to Manage Peri-implantitis"
         </div>
     </div>
 
     <div class="prompt-section">
-        <div class="prompt-title">2. Technical Definition Section</div>
-        <button class="copy-button" onclick="copyToClipboard(this)">Copy</button>
-        <div class="prompt-content">As an experienced dental specialist with expertise in implantology and surgical procedures, provide a comprehensive technical explanation of [TOPIC]. Your response should include:
-
-1. Clinical Definition:
-   - Precise technical definition
-   - Key components and considerations
-   - Relevant anatomical factors
-   - Critical biological principles
-
-2. Scientific Background:
-   - Current research findings
-   - Evidence-based protocols
-   - Biological mechanisms
-   - Technical specifications
-
-3. Clinical Significance:
-   - Impact on treatment outcomes
-   - Risk-benefit analysis
-   - Long-term considerations
-   - Success predictability factors
-
-Include relevant scientific references and clinical evidence to support your explanations. Use professional dental terminology while maintaining clarity for practicing clinicians.</div>
+        <div class="prompt-title">2. Technical Definition Prompt</div>
+        <div class="prompt-content">
+            As an experienced dental specialist, explain:
+            <ul>
+                <li>What is [TOPIC] in clinical practice?</li>
+                <li>Why is [TOPIC] crucial for treatment success?</li>
+                <li>What are the biological and clinical considerations?</li>
+                <li>What are the key limitations and contraindications?</li>
+            </ul>
+            Include scientific references and clinical evidence to support your explanations.
+        </div>
     </div>
 
     <div class="prompt-section">
-        <div class="prompt-title">3. Expert Opinion Section</div>
-        <button class="copy-button" onclick="copyToClipboard(this)">Copy</button>
-        <div class="prompt-content">As a dental implant specialist with extensive clinical experience, provide your professional perspective on [TOPIC]. Include:
-
-1. Clinical Experience:
-   - Personal observations from practice
-   - Evolution of techniques
-   - Case selection criteria
-   - Protocol modifications based on experience
-
-2. Critical Considerations:
-   - Common pitfalls to avoid
-   - Risk factors and contraindications
-   - Patient selection criteria
-   - Treatment planning factors
-
-3. Best Practices:
-   - Protocol optimization tips
-   - Clinical workflow improvements
-   - Quality control measures
-   - Long-term success factors
-
-4. Real Case Examples:
-   - Challenging scenarios
-   - Problem-solving approaches
-   - Successful outcomes
-   - Lessons learned
-
-Use clinical examples to illustrate key points while maintaining patient confidentiality. Focus on evidence-based approaches and practical applications.</div>
+        <div class="prompt-title">3. Expert Opinion Prompt</div>
+        <div class="prompt-content">
+            You're a dental specialist with expertise in [SPECIFIC AREA]. Write your professional opinion on [TOPIC]. Include:
+            <ul>
+                <li>Your clinical experience with [TOPIC]</li>
+                <li>Common mistakes to avoid</li>
+                <li>Critical decision-making factors</li>
+                <li>Real case examples from your practice</li>
+                <li>Evidence-based recommendations</li>
+            </ul>
+            Use professional medical language while maintaining clarity.
+        </div>
     </div>
 
     <div class="prompt-section">
-        <div class="prompt-title">4. Comparison Table</div>
-        <button class="copy-button" onclick="copyToClipboard(this)">Copy</button>
-        <div class="prompt-content">Create a comprehensive comparison table for [TOPIC] that includes:
-
-Clinical Factors:
-- Indications
-- Contraindications
-- Risk factors
-- Success rates
-- Complications
-
-Technical Specifications:
-- Dimensions/Measurements
-- Material properties
-- Technical requirements
-- Equipment needs
-
-Treatment Considerations:
-- Protocol variations
-- Healing times
-- Loading protocols
-- Maintenance requirements
-
-Cost-Benefit Analysis:
-- Initial investment
-- Long-term value
-- Treatment efficiency
-- Resource requirements
-
-Format the table with clear headers, organized categories, and evidence-based data. Include references to clinical studies where applicable.</div>
+        <div class="prompt-title">4. Comparison Table Prompt</div>
+        <div class="prompt-content">
+            Create a detailed comparison table for [TOPIC] including:
+            <ul>
+                <li>Clinical scenarios</li>
+                <li>Technical specifications</li>
+                <li>Advantages and limitations</li>
+                <li>Success rates</li>
+                <li>Risk factors</li>
+                <li>Cost considerations</li>
+            </ul>
+            Base information on clinical studies and current guidelines.
+        </div>
     </div>
 
     <div class="prompt-section">
-        <div class="prompt-title">5. Step-by-Step Protocol</div>
-        <button class="copy-button" onclick="copyToClipboard(this)">Copy</button>
-        <div class="prompt-content">Write a detailed clinical protocol for [TOPIC] following this structure:
-
-Pre-Procedure Phase:
-1. Initial assessment
-2. Treatment planning
-3. Patient preparation
-4. Required materials and equipment
-
-Procedure Steps:
-[Detail each step with:]
-- Critical considerations
-- Technical specifications
-- Clinical tips
-- Potential complications
-- Quality control points
-
-Post-Procedure Protocol:
-1. Immediate post-op care
-2. Follow-up schedule
-3. Complication management
-4. Long-term maintenance
-
-Include warnings, clinical tips, and critical checkpoints throughout. Add relevant images or diagrams where helpful.</div>
+        <div class="prompt-title">5. Equipment List Prompt</div>
+        <div class="prompt-content">
+            Create a comprehensive list of required equipment and materials for [TOPIC]:
+            <ul>
+                <li>Essential equipment</li>
+                <li>Optional but recommended tools</li>
+                <li>Diagnostic instruments</li>
+                <li>Materials and supplies</li>
+                <li>Safety equipment</li>
+            </ul>
+            Include specifications and critical features for each item.
+        </div>
     </div>
 
     <div class="prompt-section">
-        <div class="prompt-title">6. FAQ Section</div>
-        <button class="copy-button" onclick="copyToClipboard(this)">Copy</button>
-        <div class="prompt-content">Generate a comprehensive FAQ section for [TOPIC] addressing:
-
-Basic Questions:
-- Definition and basics
-- General indications
-- Basic protocols
-- Common concerns
-
-Advanced Clinical Questions:
-- Complex cases
-- Complication management
-- Technical specifications
-- Protocol modifications
-
-Troubleshooting:
-- Common problems
-- Solutions
-- Prevention strategies
-- Risk management
-
-Evidence-Based Answers:
-- Current research
-- Clinical guidelines
-- Best practices
-- Success rates
-
-Format as question-answer pairs, using clear, professional language. Include references where appropriate.</div>
+        <div class="prompt-title">6. Step-by-Step Protocol Prompt</div>
+        <div class="prompt-content">
+            Write a detailed step-by-step protocol for [TOPIC]:
+            <ul>
+                <li>Pre-procedure assessment</li>
+                <li>Preparation steps</li>
+                <li>Main procedure steps</li>
+                <li>Post-procedure care</li>
+                <li>Follow-up protocol</li>
+            </ul>
+            Include clinical tips, warnings, and critical checkpoints at each step.
+        </div>
     </div>
 
     <div class="prompt-section">
-        <div class="prompt-title">7. Conclusion and Clinical Recommendations</div>
-        <button class="copy-button" onclick="copyToClipboard(this)">Copy</button>
-        <div class="prompt-content">Write a conclusion for [TOPIC] that includes:
-
-Summary of Key Points:
-- Main clinical principles
-- Critical success factors
-- Risk management strategies
-- Best practices
-
-Practical Recommendations:
-- Clinical guidelines
-- Protocol modifications
-- Quality control measures
-- Patient management tips
-
-Future Perspectives:
-- Emerging technologies
-- Research directions
-- Potential improvements
-- Industry trends
-
-Final Thoughts:
-- Clinical significance
-- Implementation tips
-- Success factors
-- Quality assurance</div>
+        <div class="prompt-title">7. FAQ Section Prompt</div>
+        <div class="prompt-content">
+            Generate a comprehensive FAQ section addressing common concerns about [TOPIC]:
+            <ul>
+                <li>Questions from both novice and experienced practitioners</li>
+                <li>Complications and their prevention</li>
+                <li>Technical considerations</li>
+                <li>Maintenance and follow-up</li>
+                <li>Patient education aspects</li>
+            </ul>
+            Base answers on clinical evidence and current guidelines.
+        </div>
     </div>
 
-    <script>
-    function copyToClipboard(button) {
-        const content = button.nextElementSibling.textContent;
-        navigator.clipboard.writeText(content).then(() => {
-            const originalText = button.textContent;
-            button.textContent = 'Copied!';
-            setTimeout(() => {
-                button.textContent = originalText;
-            }, 2000);
-        });
-    }
-    </script>
+    <div class="prompt-section">
+        <div class="prompt-title">8. Title Generation Prompt</div>
+        <div class="prompt-content">
+            Write 5 clinically relevant, SEO-optimized titles for the article about [TOPIC]. Titles should:
+            <ul>
+                <li>Target dental professionals</li>
+                <li>Include specific clinical scenarios</li>
+                <li>Address common challenges</li>
+                <li>Highlight professional benefits</li>
+                <li>Use relevant keywords</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="note">
+        <p><strong>Important Notes:</strong></p>
+        <ul>
+            <li>Replace [TOPIC] with your specific dental procedure or technique</li>
+            <li>Adjust technical complexity based on your target audience</li>
+            <li>Include relevant clinical images and diagrams where possible</li>
+            <li>Always verify clinical information with current research</li>
+            <li>Maintain professional tone throughout the article</li>
+        </ul>
+    </div>
 </body>
 </html>
